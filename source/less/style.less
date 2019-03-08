@@ -342,7 +342,7 @@ img {
   display: flex;
   height: 442px;
   margin-top: 24px;
-  background-color: @black;
+  background-color: #0f0e0a;
 
   &__wrapper {
     position: relative;
@@ -375,7 +375,7 @@ img {
 
   &__item-title {
     margin: 0;
-    margin-top: 18px;
+    margin-top: 15px;
     font-weight: 700;
     font-size: 48px;
     font-family: "Cormorant Infant", serif;
@@ -565,4 +565,51 @@ img {
   font-size: 48px;
   font-family: "Cormorant Infant", serif;
   text-transform: uppercase;
+}
+
+// Brand-watches
+.brand-watches {
+  display: flex;
+  justify-content: space-between;
+  min-height: 378px;
+  box-sizing: border-box;
+  margin-top: 70px;
+  background-color: #0f0e0a;
+
+  &__wrapper {
+    padding-top: 77px;
+    padding-bottom: 20px;
+    background-image: url("../img/bg-watches.jpg");
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+    background-size: cover;
+  }
+
+  &__promo {
+    margin: 0;
+    font-weight: 500;
+    font-size: 24px;
+    color: @yellow;
+  }
+
+  &__title {
+    margin: 15px 0 0;
+    font-weight: 700;
+    font-size: 48px;
+    font-family: "Cormorant Infant", serif;
+    color: #ffffff;
+  }
+
+  &__text {
+    width: 44%;
+    margin: 0;
+    margin-top: 12px;
+    font-weight: 300;
+    font-size: 14px;
+    color: #ffffff;
+  }
+
+  &__link {
+    margin-top: 47px;
+  }
 }
