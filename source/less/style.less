@@ -176,6 +176,13 @@ img {
   width: 95%;
   max-width: 1110px;
   margin: 0 auto;
+
+  &--decor {
+    padding-top: 33px;
+    background-image: url("../img/decor-image.png");
+    background-repeat: no-repeat;
+    background-position-x: center;
+  }
 }
 
 // Logo
@@ -441,4 +448,121 @@ img {
     color: #ffffff;
     border: 1px solid #ffffff;
   }
+}
+
+// Category
+.category {
+  margin-top: 70px;
+
+  &__list {
+    .list-reset();
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 45px;
+  }
+
+  &__item {
+    margin-right: 2.6%;
+    margin-bottom: 2.6%;
+  }
+
+  &__item:nth-child(3n) {
+    margin-right: 0;
+  }
+
+  &__link {
+    display: block;
+    width: 350px;
+    min-height: 270px;
+    box-sizing: border-box;
+    padding: 32px;
+    color: inherit;
+    text-decoration: none;
+    border: 1px solid @light-gray;
+    border-radius: 5px;
+
+    &:hover {
+      border: 1px solid @black;
+    }
+
+    &--kits {
+      background-image:
+        url("../img/bg-kits1.png"),
+        url("../img/bg-kits2.png");
+      background-repeat: no-repeat;
+      background-position:
+        30px 50px,
+        155px 0;
+    }
+
+    &--rings {
+      background-image: url("../img/bg-rings.png");
+      background-repeat: no-repeat;
+      background-position: 100% center;
+    }
+
+    &--earrings {
+      background-image: url("../img/bg-earrings.png");
+      background-repeat: no-repeat;
+      background-position: 100% 0;
+    }
+
+    &--suspensions {
+      background-image: url("../img/bg-suspensions.png");
+      background-repeat: no-repeat;
+      background-position: 100% 0;
+    }
+
+    &--bracelet {
+      background-image: url("../img/bg-bracelet.png");
+      background-repeat: no-repeat;
+      background-position: 100% 27px;
+    }
+
+    &--crosses {
+      background-image: url("../img/bg-crosses.png");
+      background-repeat: no-repeat;
+      background-position: 90% 0;
+    }
+
+    &--clock {
+      background-image: url("../img/bg-clock2.png");
+      background-repeat: no-repeat;
+      background-position: 100% 0;
+    }
+
+    &--cufflinks {
+      background-image:
+        url("../img/bg-cufflink1.png"),
+        url("../img/bg-cufflink2.png");
+      background-repeat: no-repeat;
+      background-position:
+        35px 20px,
+        100% 100%;
+    }
+
+    &--broochs {
+      background-image: url("../img/bg-brooch.png");
+      background-repeat: no-repeat;
+      background-position: 100% 68px;
+    }
+  }
+
+  &__link-title {
+    margin: 0;
+    margin-top: 133px;
+    font-weight: 700;
+    font-size: 30px;
+    text-transform: uppercase;
+  }
+}
+
+// Site-title
+.site-title {
+  margin: 0;
+  text-align: center;
+  font-weight: 700;
+  font-size: 48px;
+  font-family: "Cormorant Infant", serif;
+  text-transform: uppercase;
 }
