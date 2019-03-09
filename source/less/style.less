@@ -741,13 +741,17 @@ body {
   }
 
   &__item {
-    width: 350px;
+    width: 31.5%;
     margin-right: 2.7%;
     margin-bottom: 2.7%;
   }
 
   &__item:nth-child(3n) {
     margin-right: 0;
+  }
+
+  &__item img {
+    width: 100%;
   }
 
   &__item-title {
@@ -892,5 +896,213 @@ body {
     border-top: none;
     border-left: none;
     transform: rotate(-135deg);
+  }
+}
+
+@media (max-width: 1166px) {
+  .category {
+    &__list {
+      justify-content: space-around;
+    }
+
+    &__item:nth-child(3n) {
+      margin-right: 2.6%;
+    }
+
+    &__item:nth-child(2n) {
+      margin-right: 0;
+    }
+  }
+
+  .goods {
+    &__list {
+      justify-content: space-around;
+    }
+
+    &__item:nth-child(4n) {
+      margin-right: 2.6%;
+    }
+  }
+}
+
+@media (max-width: 980px) {
+  .slider {
+    &__item {
+      background-position-x: 108%;
+    }
+
+    &__item-title {
+      font-size: 42px;
+    }
+  }
+
+  .brand-watches {
+    &__title {
+      font-size: 42px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .main-nav {
+    width: 80%;
+  }
+
+  .slider {
+    &__item {
+      background-image: url("../img/bg-clock-tablet.png");
+      background-position-x: 104%;
+    }
+
+    &__item-title {
+      font-size: 36px;
+    }
+
+    &__text {
+      width: 61%;
+    }
+  }
+
+  .site-title {
+    font-size: 36px;
+  }
+
+  .category {
+    &__list {
+      justify-content: space-around;
+      margin-top: 25px;
+    }
+
+    &__item,
+    &__item:nth-child(3n) {
+      margin-right: 0;
+    }
+
+    &__link {
+      width: 229px;
+      min-height: 194px;
+      box-sizing: border-box;
+      padding: 15px;
+      padding-left: 21px;
+
+      &--kits {
+        background-image:
+          url("../img/bg-kits1-tablet.png"),
+          url("../img/bg-kits2-tablet.png");
+        background-position: 20px 19px, 135px 0;
+      }
+
+      &--rings {
+        background-image: url("../img/bg-rings-tablet.png");
+        background-position: 100% 15px;
+      }
+
+      &--earrings {
+        background-image: url("../img/bg-earrings-tablet.png");
+        background-position: 100% 0;
+      }
+
+      &--suspensions {
+        background-image: url("../img/bg-suspensions-tablet.png");
+        background-position: 100% 0;
+      }
+
+      &--bracelet {
+        background-image: url("../img/bg-bracelet-tablet.png");
+        background-position: 100% 15px;
+      }
+
+      &--crosses {
+        background-image: url("../img/bg-crosses-tablet.png");
+        background-position: 90% 0;
+      }
+
+      &--clock {
+        background-image: url("../img/bg-clock2-tablet.png");
+        background-position: 100% 0;
+      }
+
+      &--cufflinks {
+        background-image:
+          url("../img/bg-cufflink1-tablet.png"),
+          url("../img/bg-cufflink2-tablet.png");
+        background-position: 27px 20px, 100% 23px;
+      }
+
+      &--broochs {
+        background-image: url("../img/bg-brooch-tablet.png");
+        background-position: 100% 30px;
+      }
+    }
+
+    &__link-title {
+      margin-top: 133px;
+      font-size: 24px;
+    }
+  }
+
+  .brand-watches {
+    min-height: 300px;
+    margin-top: 50px;
+
+    &__wrapper {
+      padding-top: 46px;
+      background-position: 39% 0;
+    }
+
+    &__title {
+      font-size: 36px;
+    }
+
+    &__text {
+      width: 48%;
+    }
+
+    &__link {
+      margin-top: 22px;
+    }
+  }
+
+  .filtered-goods {
+    margin-top: 70px;
+  }
+
+  .goods {
+    &__list {
+      justify-content: space-around;
+    }
+
+    &__item,
+    &__item-photo {
+      width: 229px;
+    }
+
+    &__item,
+    &__item:nth-child(3n),
+    &__item:nth-child(4n) {
+      margin-right: 0;
+    }
+  }
+
+  .blog {
+    &__list {
+      margin-top: 33px;
+    }
+
+    &__item {
+      width: 48.5%;
+    }
+
+    &__item:nth-child(2n) {
+      margin-right: 0;
+    }
+
+    &__item:nth-child(3) {
+      display: none;
+    }
+  }
+
+  .footer {
+    margin-top: 70px;
   }
 }
