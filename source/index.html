@@ -171,7 +171,7 @@
     </section>
     <section class="filtered-goods">
       <h2 class="visually-hidden">Отфильтрованный товар</h2>
-      <div class="wrapper wrapper--decor">
+      <div class="filtered-goods__wrapper wrapper wrapper--decor">
         <div class="filtered-goods__tabs">
           <button class="filtered-goods__tab filtered-goods__tab--active" type="button">Топ продаж</button>
           <button class="filtered-goods__tab" type="button">Новинки</button>
@@ -245,10 +245,14 @@
             </li>
           </ul>
         </div>
+        <div class="goods__buttons slider-switches">
+          <button class="goods__button slider-switches__switch" type="button" aria-label="Предыдущий товар"></button>
+          <button class="goods__button slider-switches__switch slider-switches__switch--next" type="button" aria-label="Следующий товар"></button>
+        </div>
       </div>
     </section>
     <article class="blog">
-      <div class="wrapper wrapper--decor">
+      <div class="blog__wrapper wrapper wrapper--decor">
         <h2 class="site-title">БЛОГ</h2>
         <ul class="blog__list">
           <li class="blog__item">
@@ -282,6 +286,10 @@
             <time class="blog__item-date" datetime="2018-01-29">29 января</time>
           </li>
         </ul>
+        <div class="blog__buttons slider-switches">
+          <button class="blog__button slider-switches__switch" type="button" aria-label="Предыдущий пост"></button>
+          <button class="blog__button slider-switches__switch slider-switches__switch--next" type="button" aria-label="Следующий пост"></button>
+        </div>
         <div class="blog__description">
           <p class="blog__description-text">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat
@@ -300,5 +308,7 @@
     </div>
   </footer>
   <a class="to-top-link" href="#header" aria-label="На верх страницы"></a>
+  <script src="js/script.js"></script>
+  <script src="js/script.js"></script>
 </body>
 </html>
