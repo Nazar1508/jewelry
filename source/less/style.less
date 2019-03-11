@@ -452,23 +452,22 @@ body {
   &__list {
     .list-reset();
     display: flex;
-    justify-content: space-around;
     flex-wrap: wrap;
     margin-top: 45px;
     margin-left: -2.6%;
   }
 
   &__item {
+    width: 30.7%;
     margin-left: 2.6%;
     margin-bottom: 2.6%;
   }
 
   &__link {
     display: block;
-    width: 350px;
     min-height: 270px;
     box-sizing: border-box;
-    padding: 32px;
+    padding: 8.57%;
     color: inherit;
     text-decoration: none;
     border: 1px solid @light-gray;
@@ -483,9 +482,7 @@ body {
         url("../img/bg-kits1.png"),
         url("../img/bg-kits2.png");
       background-repeat: no-repeat;
-      background-position:
-        30px 50px,
-        155px 0;
+      background-position: 9% 50px, 90% 0;
     }
 
     &--rings {
@@ -530,7 +527,7 @@ body {
         url("../img/bg-cufflink2.png");
       background-repeat: no-repeat;
       background-position:
-        35px 20px,
+        11% 20px,
         100% 100%;
     }
 
@@ -664,7 +661,6 @@ body {
   &__list {
     .list-reset();
     display: flex;
-    justify-content: space-around;
     flex-wrap: wrap;
     margin-left: -2.6%;
   }
@@ -673,7 +669,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 255px;
+    width: 22.4%;
     margin-left: 2.6%;
     margin-bottom: 2.6%;
     padding-bottom: 30px;
@@ -683,7 +679,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 255px;
+    width: 100%;
     min-height: 244px;
     box-sizing: border-box;
     border: 1px solid @light-gray;
@@ -813,6 +809,10 @@ body {
   margin-top: 98px;
   border-top: 1px solid @light-gray;
 
+  &--cart {
+    margin-top: 30px;
+  }
+
   &__wrapper {
     display: flex;
     flex-direction: column;
@@ -930,6 +930,175 @@ body {
   }
 }
 
+.breadcrumbs {
+  margin-top: 21px;
+  border-top: 1px solid @light-gray;
+
+  &__list {
+    .list-reset();
+    display: flex;
+    margin-top: 22px;
+  }
+
+  &__item {
+    margin-left: 6px;
+  }
+
+  &__item:first-child {
+    margin-left: 0;
+  }
+
+  &__link {
+    font-size: 14px;
+    color: #989898;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+
+    &--active {
+      color: @yellow;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+.item-cart {
+  margin-top: 24px;
+
+  &__wrapper {
+    display: flex;
+  }
+
+  &__gallery {
+    width: 48.66%;
+  }
+
+  &__preview {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding-top: 11.1%;
+    padding-bottom: 11.1%;
+    box-sizing: border-box;
+    border: 1px solid @light-gray;
+    border-radius: 5px;
+  }
+
+  &__buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+
+  &__button {
+    .button-reset();
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 22.22%;
+    box-sizing: border-box;
+    padding-top: 4.26%;
+    padding-bottom: 4.26%;
+    border: 1px solid @light-gray;
+    border-radius: 5px;
+  }
+
+  &__description {
+    width: 48.65%;
+    margin-left: 2.7%;
+  }
+
+  &__title {
+    margin: 0;
+    font-size: 30px;
+    font-family: "Cormorant Infant", serif;
+    text-transform: uppercase;
+  }
+
+  &__table {
+    width: 100%;
+    margin-top: 20px;
+    font-size: 14px;
+  }
+
+  &__table-row {
+    display: flex;
+    margin-bottom: 7px;
+  }
+
+  &__parameter {
+    flex-shrink: 0;
+    width: 140px;
+    box-sizing: border-box;
+    color: #989898;
+  }
+
+  &__value {
+    flex-grow: 1;
+  }
+
+  &__value--big {
+    color: @yellow;
+  }
+
+  &__price {
+    margin: 0;
+    margin-top: 12px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid @light-gray;
+  }
+
+  &__new-price {
+    font-size: 30px;
+    color: @yellow;
+  }
+
+  &__old-price {
+    margin-left: 40px;
+    font-weight: 500;
+    font-size: 24px;
+    color: #616161;
+    text-decoration: line-through;
+  }
+
+  &__social {
+    display: flex;
+    align-items: center;
+    margin-top: 25px;
+  }
+
+  &__social-title {
+    margin: 0;
+    margin-right: 23px;
+    font-weight: 500;
+    font-size: 18px;
+    color: #989898;
+  }
+}
+
+// Similar-products
+.similar-products {
+  margin-top: 100px;
+
+  &__goods {
+    margin-top: 45px;
+  }
+}
+
+@media (max-width: 1100px) {
+  .category {
+    &__item {
+      width: 47.4%;
+    }
+  }
+}
+
 @media (max-width: 980px) {
   .slider {
     &__item {
@@ -944,6 +1113,24 @@ body {
   .brand-watches {
     &__title {
       font-size: 42px;
+    }
+  }
+
+  .goods {
+    &__item {
+      width: 30.7%;
+    }
+  }
+
+  .item-cart {
+    &__preview {
+      padding-top: 8%;
+      padding-bottom: 8%;
+    }
+
+    &__button {
+      padding-top: 2.26%;
+      padding-bottom: 2.26%;
     }
   }
 }
@@ -977,18 +1164,22 @@ body {
       margin-top: 25px;
     }
 
+    &__item {
+      width: 30.6%;
+      margin-left: 2.7%;
+      margin-bottom: 2.7%;
+    }
+
     &__link {
-      width: 229px;
       min-height: 194px;
       box-sizing: border-box;
-      padding: 15px;
-      padding-left: 21px;
+      padding: 9.2%;
 
       &--kits {
         background-image:
           url("../img/bg-kits1-tablet.png"),
           url("../img/bg-kits2-tablet.png");
-        background-position: 20px 19px, 135px 0;
+        background-position: 10% 19px, 90% 0;
       }
 
       &--rings {
@@ -1067,13 +1258,8 @@ body {
   }
 
   .goods {
-    &__list {
-      justify-content: space-around;
-    }
-
-    &__item,
     &__item-photo {
-      width: 229px;
+      min-height: 218px;
     }
   }
 
@@ -1091,8 +1277,64 @@ body {
     }
   }
 
+  .item-cart {
+    &__gallery {
+      overflow: hidden;
+    }
+
+    &__preview {
+      padding-top: 8.5%;
+      padding-bottom: 8.5%;
+    }
+
+    &__button {
+      flex-shrink: 0;
+      width: 30%;
+      margin-right: 5%;
+      padding-top: 5.15%;
+      padding-bottom: 5.15%;
+    }
+
+    &__table {
+      margin-top: 14px;
+      font-size: 12px;
+    }
+
+    &__table-row {
+      margin-bottom: 3px;
+    }
+
+    &__parameter {
+      width: 114px;
+    }
+
+    &__social {
+      margin-top: 30px;
+    }
+  }
+
+  .similar-products {
+    margin-top: 70px;
+
+    &__goods {
+      margin-top: 33px;
+    }
+  }
+
   .footer {
     margin-top: 70px;
+
+    &--cart {
+      margin-top: 20px;
+    }
+  }
+}
+
+@media (max-width: 710px) {
+  .goods {
+    &__item {
+      width: 47.4%;
+    }
   }
 }
 
@@ -1151,6 +1393,26 @@ body {
       padding-top: 50px;
       background-image: url("../img/bg-clock-mobile.png");
       background-position: 100% 70px;
+    }
+  }
+
+  .item-cart {
+    &__price {
+      display: flex;
+      flex-direction: column-reverse;
+      padding-bottom: 10px;
+    }
+
+    &__old-price {
+      margin-left: 0;
+    }
+
+    &__social {
+      margin-top: 10px;
+    }
+
+    &__social-title {
+      margin-right: 5%;
     }
   }
 }
@@ -1305,26 +1567,117 @@ body {
     }
   }
 
-  .goods {
-    width: 240px;
-    overflow-x: hidden;
+
+  .blog {
+    &__item-title {
+      font-size: 16px;
+    }
+  }
+
+  .breadcrumbs {
+    margin-top: 15px;
 
     &__list {
-      width: fit-content;
+      margin-top: 18px;
+    }
+  }
+
+  .item-cart {
+    margin-top: 18px;
+
+    &__wrapper {
+      flex-direction: column;
+    }
+
+    &__gallery {
+      width: 100%;
+    }
+
+    &__buttons {
+      position: relative;
+    }
+
+
+    &__button {
+      width: 29.25%;
+      min-height: 106px;
+      margin-left: 2%;
+      margin-right: 2%;
+    }
+
+    &__description {
+      width: 100%;
+      margin-top: 30px;
+      margin-left: 0;
+    }
+
+    &__price {
+      flex-direction: row;
+      align-items: flex-end;
+    }
+
+    &__old-price {
+      margin-left: 5%;
+    }
+
+    &__social {
+      margin-top: 19px;
+      padding-bottom: 19px;
+      border-bottom: 1px solid @light-gray;
+    }
+
+    &__switches {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+
+  .similar-products {
+    margin-top: 50px;
+
+    &__wrapper {
+      position: relative;
+    }
+
+    &__goods {
+      margin: 0 auto;
+      margin-top: 22px;
+    }
+  }
+
+  .slider-switches {
+    &--item-cart {
+      display: flex;
+    }
+  }
+
+  .footer {
+    margin-top: 50px;
+  }
+}
+
+@media (max-width: 460px) {
+  .filtered-goods {
+    &__wrapper {
+      position: relative;
+    }
+  }
+
+  .goods {
+    width: 70.6%;
+
+    &__list {
       flex-wrap: nowrap;
       margin-left: 0;
+      overflow: hidden;
     }
 
     &__item {
       flex-shrink: 0;
-      width: 240px;
+      width: 100%;
       margin-left: 0;
       margin-right: 5px;
-      margin-bottom: 0;
-    }
-
-    &__item-photo {
-      width: 100%;
     }
 
     &__buttons {
@@ -1332,10 +1685,6 @@ body {
       top: 50%;
       margin-top: -35px;
     }
-  }
-
-  .slider-switches {
-    display: flex;
   }
 
   .blog {
@@ -1356,17 +1705,19 @@ body {
       margin-right: 5px;
     }
 
-    &__item-title {
-      font-size: 16px;
-    }
-
     &__buttons {
       position: absolute;
     }
   }
 
+  .slider-switches {
+    display: flex;
+  }
+
   .footer {
-    margin-top: 50px;
+    &--cart {
+      margin-top: 20px;
+    }
   }
 }
 
@@ -1388,6 +1739,12 @@ body {
     &__item {
       width: 27px;
       height: 27px;
+    }
+  }
+
+  .breadcrumbs {
+    &__link {
+      font-size: 12px;
     }
   }
 
