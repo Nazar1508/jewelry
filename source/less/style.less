@@ -555,6 +555,10 @@ body {
   font-size: 48px;
   font-family: "Cormorant Infant", serif;
   text-transform: uppercase;
+
+  &--news {
+    text-align: left;
+  }
 }
 
 // Brand-watches
@@ -726,42 +730,7 @@ body {
 
   &__list {
     .list-reset();
-    display: flex;
-    flex-wrap: wrap;
     margin-top: 45px;
-    margin-left: -2.7%;
-  }
-
-  &__item {
-    width: 30.6%;
-    margin-left: 2.7%;
-    margin-bottom: 2.7%;
-  }
-
-  &__item img {
-    width: 100%;
-  }
-
-  &__item-title {
-    margin: 0;
-    margin-top: 19px;
-    font-weight: 500;
-    font-size: 18px;
-  }
-
-  &__item-text {
-    margin: 0;
-    margin-top: 21px;
-    padding-right: 5px;
-    font-size: 14px;
-    color: #989898;
-  }
-
-  &__item-date {
-    display: block;
-    margin-top: 17px;
-    font-size: 14px;
-    color: @yellow;
   }
 
   &__description {
@@ -930,6 +899,7 @@ body {
   }
 }
 
+// Breadcrumbs
 .breadcrumbs {
   margin-top: 21px;
   border-top: 1px solid @light-gray;
@@ -967,6 +937,7 @@ body {
   }
 }
 
+// Item-cart
 .item-cart {
   margin-top: 24px;
 
@@ -1088,6 +1059,91 @@ body {
 
   &__goods {
     margin-top: 45px;
+  }
+}
+
+// Post-list
+.post-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -2.6%;
+
+  &__item {
+    width: 30.7%;
+    margin-left: 2.6%;
+    margin-bottom: 2.68%;
+  }
+
+  &__item img {
+    width: 100%;
+  }
+
+  &__item-title {
+    margin: 0;
+    margin-top: 19px;
+    font-weight: 500;
+    font-size: 18px;
+  }
+
+  &__item-text {
+    margin: 0;
+    margin-top: 21px;
+    padding-right: 5px;
+    font-size: 14px;
+    color: #989898;
+  }
+
+  &__item-date {
+    display: block;
+    margin-top: 17px;
+    font-size: 14px;
+    color: @yellow;
+  }
+}
+
+// News
+.news {
+  margin-top: 50px;
+
+  &__list {
+    .list-reset();
+    margin-top: 47px;
+    margin-left: -2.7%;
+  }
+
+  &__pagination {
+    margin: 0 auto;
+    margin-top: 20px;
+  }
+}
+
+// pagination
+.pagination {
+  width: 222px;
+
+  &__list {
+    .list-reset();
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 35px;
+    height: 35px;
+    box-sizing: border-box;
+    border: 1px solid @light-gray;
+    border-radius: 3px;
+    color: #989898;
+    text-decoration: none;
+
+    &--active {
+      color: #ffffff;
+      background-color: @yellow;
+      border: none;
+    }
   }
 }
 
@@ -1263,20 +1319,6 @@ body {
     }
   }
 
-  .blog {
-    &__list {
-      margin-top: 33px;
-    }
-
-    &__item {
-      width: 47.2%;
-    }
-
-    &__item:nth-child(3) {
-      display: none;
-    }
-  }
-
   .item-cart {
     &__gallery {
       overflow: hidden;
@@ -1326,6 +1368,28 @@ body {
 
     &--cart {
       margin-top: 20px;
+    }
+  }
+
+  .blog {
+    &__list {
+      margin-top: 33px;
+    }
+  }
+
+  .post-list {
+    &__item {
+      width: 47.2%;
+    }
+
+    &__item:nth-child(3) {
+      display: none;
+    }
+  }
+
+  .news {
+    &__list {
+      margin-top: 25px;
     }
   }
 }
@@ -1567,19 +1631,8 @@ body {
     }
   }
 
-
-  .blog {
-    &__item-title {
-      font-size: 16px;
-    }
-  }
-
   .breadcrumbs {
     margin-top: 15px;
-
-    &__list {
-      margin-top: 18px;
-    }
   }
 
   .item-cart {
@@ -1652,6 +1705,18 @@ body {
     }
   }
 
+  .blog {
+    &__list {
+      margin-top: 18px;
+    }
+  }
+
+  .post-list {
+    &__item-title {
+      font-size: 16px;
+    }
+  }
+
   .footer {
     margin-top: 50px;
   }
@@ -1693,18 +1758,6 @@ body {
       overflow: hidden;
     }
 
-    &__list {
-      flex-wrap: nowrap;
-      margin-left: 0;
-    }
-
-    &__item {
-      flex-shrink: 0;
-      width: 100%;
-      margin-left: 0;
-      margin-right: 5px;
-    }
-
     &__buttons {
       position: absolute;
     }
@@ -1714,9 +1767,37 @@ body {
     display: flex;
   }
 
+  .post-list {
+    flex-wrap: nowrap;
+    margin-left: 0;
+
+    &--news {
+      flex-wrap: wrap;
+    }
+
+    &__item {
+      flex-shrink: 0;
+      width: 100%;
+      margin-left: 0;
+      margin-right: 5px;
+
+      &--news {
+        margin-bottom: 26px;
+      }
+    }
+  }
+
   .footer {
     &--cart {
       margin-top: 20px;
+    }
+  }
+
+  .news {
+    margin-top: 27px;
+
+    &__list {
+      margin-top: 22px;
     }
   }
 }
