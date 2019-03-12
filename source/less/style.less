@@ -556,7 +556,7 @@ body {
   font-family: "Cormorant Infant", serif;
   text-transform: uppercase;
 
-  &--news {
+  &--left {
     text-align: left;
   }
 }
@@ -1201,6 +1201,125 @@ body {
   }
 }
 
+// About-us
+.about-us {
+  margin-top: 50px;
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 45px;
+  }
+
+  &__info {
+    width: 48.65%;
+  }
+
+  &__text {
+    margin: 0;
+    font-size: 14px;
+    line-height: 18px;
+    color: #616161;
+    padding-bottom: 22px;
+    border-bottom: 1px solid @light-gray;
+  }
+
+  &__phone {
+    position: relative;
+    margin-top: 28px;
+    padding-left: 71px;
+    padding-bottom: 28px;
+    border-bottom: 1px solid @light-gray;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 2px;
+      left: 0;
+      width: 50px;
+      height: 47px;
+      background-image: url("../img/icon/sprites.png");
+      background-position: -50px -3px;
+    }
+
+    &-title {
+      margin: 0;
+      font-weight: 400;
+      color: #616161;
+    }
+
+    &-link {
+      display: block;
+      margin-top: 7px;
+      font-weight: 700;
+      font-size: 24px;
+      color: inherit;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+  }
+
+  &__form-title {
+    margin: 0;
+    margin-bottom: 18px;
+    font-size: 30px;
+    font-family: "Cormorant Infant", serif;
+    text-transform: uppercase;
+  }
+
+  &__form-label {
+    margin-bottom: 10px;
+  }
+
+  &__form-input {
+    width: 350px;
+    box-sizing: border-box;
+    padding: 15px 21.5px;
+    border: 1px solid @light-gray;
+    border-radius: 3px;
+
+    &::placeholder {
+      font-size: 14px;
+      color: #616161;
+    }
+  }
+
+  &__form-button {
+    .button-reset();
+    width: 160px;
+    box-sizing: border-box;
+    padding: 15px;
+    font-weight: 500;
+    font-size: 14px;
+    color: #ffffff;
+    background-color: @yellow;
+    border-radius: 3px;
+
+    &:hover {
+      background-color: @black;
+    }
+  }
+
+  &__picture {
+    width: 48.65%;
+    margin-left: 2.7%;
+  }
+
+  &__image {
+    width: 100%;
+  }
+}
+
 @media (max-width: 1100px) {
   .category {
     &__item {
@@ -1464,6 +1583,27 @@ body {
       margin-left: 0;
     }
   }
+
+  .about-us {
+    margin-top: 28px;
+
+    &__container {
+      margin-top: 15px;
+    }
+
+    &__text {
+      font-size: 12px;
+      line-height: 16px;
+    }
+
+    &__form-input {
+      width: 100%;
+    }
+
+    &__picture {
+      margin-top: -45px;
+    }
+  }
 }
 
 
@@ -1550,6 +1690,26 @@ body {
 
     &__social-title {
       margin-right: 5%;
+    }
+  }
+
+  .about-us {
+    &__container {
+      flex-direction: column-reverse;
+    }
+
+    &__picture {
+      width: 60%;
+      margin-top: 0;
+      margin-left: 0;
+    }
+
+    &__info {
+      width: 100%;
+    }
+
+    &__text {
+      margin-top: 16px;
     }
   }
 }
@@ -1912,6 +2072,12 @@ body {
   .breadcrumbs {
     &__link {
       font-size: 12px;
+    }
+  }
+
+  .about-us {
+    &__picture {
+      width: 100%;
     }
   }
 
